@@ -1,4 +1,4 @@
-# bloom-chrome
+# chrome-extension
 
 ## Project setup
 ```
