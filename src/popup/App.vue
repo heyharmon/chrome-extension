@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-navbar toggleable="lg" type="dark" variant="info">
-            <b-navbar-brand href="#">Weather App</b-navbar-brand>
+            <b-navbar-brand href="#">Weather App {{ totalTvCount }}</b-navbar-brand>
         </b-navbar>
 
         <div class="page">
@@ -48,9 +48,20 @@ export default {
 
   data() {
     return {
-      form: {}
+      form: {},
+      totalTvCount: ''
     };
   },
+
+  mounted() {
+    this.totalTvCount = this.$store.state.totalTvCount
+  },
+
+  // computed: {
+  //   totalTvCount() {
+  //       return this.$store.state.totalTvCount
+  //   }
+  // },
 
   methods: {
     async onSubmit() {

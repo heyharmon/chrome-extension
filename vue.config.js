@@ -8,9 +8,18 @@ module.exports = {
   },
   pluginOptions: {
     browserExtension: {
+      components: {
+        background: true,
+        contentScripts: true
+      },
       componentOptions: {
         background: {
           entry: 'src/background.js'
+        },
+        contentScripts: {
+            entries: {
+                content: 'src/content.js'
+            }
         }
       }
     }

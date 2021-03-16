@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        keyword: ""
+        keyword: "",
+        totalTvCount: window.localStorage.getItem('totalTvCount')
     },
 
     mutations: {
